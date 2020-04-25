@@ -1,10 +1,23 @@
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 8080
+const express = require("express");
+const path = require("path");
+const PORT = process.env.PORT || 8080;
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+const server = express() // create an express server
+
+
+
+server.use(express.static(path.join(__dirname, "public"))); // declare a directory for all the static files
+
+server.set("views", path.join(__dirname, "views")); // declare a directory for all the template files
+
+server.set("view engine", "ejs"); // declare a template engine for converting the templates to html for the browser to parse
+
+// register routes
+
+server.get("/", (req, res) => res.render("pages/index")); // register the home route to point to the index.ejs template
+server.get("/contacts", (req, res) => res.render("pages/contacts")) // register the contacts routes to point to the contacts.ejs template
+server.get("/about", (req, res) => res.render("pages/about")) // register the about routes to point to the about.ejs 
+
+
+server.listen(PORT, () => console.log(`Listening on ${PORT}`));
+
