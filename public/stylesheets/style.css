@@ -10,6 +10,14 @@
   --h5: calc(var(--h6) * 1.125);
   --h6: calc((1em));
 }
+li{
+  list-style:none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 
 .style-main {
   background-image: linear-gradient(90deg, rgb(192, 45, 40), rgb(230, 98, 37));
@@ -41,12 +49,15 @@ img {
 .holder {
   display: flex;
   flex: wrap;
+  padding: 0 1.5rem;
+  align-items: center;
 }
 
 .navigation {
   flex: 1;
   color: #fff;
 }
+
 
 .line {
   border: 1px solid red;

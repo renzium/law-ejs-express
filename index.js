@@ -18,6 +18,8 @@ server.get("/", (req, res) => res.render("pages/index")); // register the home r
 server.get("/contacts", (req, res) => res.render("pages/contacts")) // register the contacts routes to point to the contacts.ejs template
 server.get("/about", (req, res) => res.render("pages/about")) // register the about routes to point to the about.ejs 
 server.get("/music", (req, res) => res.render("pages/music")) // register the about routes to point to the about.ejs 
+server.get("/gallery", (req, res) => res.render("pages/my-picture")) // register the about routes to point to the about.ejs 
+server.get("/hot-spot", (req, res) => res.render("pages/hot-spot")) // register the about routes to point to the about.ejs 
 
 
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));
