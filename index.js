@@ -17,6 +17,7 @@ server.set("view engine", "ejs"); // declare a template engine for converting th
 server.get("/", (req, res) => res.render("pages/index")); // register the home route to point to the index.ejs template
 server.get("/contacts", (req, res) => res.render("pages/contacts")) // register the contacts routes to point to the contacts.ejs template
 server.get("/about", (req, res) => res.render("pages/about")) // register the about routes to point to the about.ejs 
+server.get("/music", (req, res) => res.render("pages/music")) // register the about routes to point to the about.ejs 
 
 
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));
