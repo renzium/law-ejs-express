@@ -10,6 +10,9 @@
   --h5: calc(var(--h6) * 1.125);
   --h6: calc((1em));
 }
+body{
+  background-color: rgb(134, 119, 119);
+}
 li{
   list-style:none;
 }
@@ -17,6 +20,13 @@ li{
 a {
   color: inherit;
   text-decoration: inherit;
+}
+a:hover{
+  color: yellow;
+  font-size: calc(var(--h5)*.7);
+}
+{
+  color: yellow;
 }
 
 .style-main {
@@ -62,4 +72,15 @@ img {
 .line {
   border: 1px solid red;
   margin: 0;
+}
+article{
+  margin:0.8rem;
+  border-radius: 30px;
+  padding: 1rem;
+  background-color: rgb(155, 255, 213);
+}
+
+p{
+  font-size: var(--h3);
+  color: rgb(221, 72, 154);
 }
